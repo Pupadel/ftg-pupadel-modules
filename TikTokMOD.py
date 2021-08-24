@@ -15,6 +15,6 @@ class TikTokMod(loader.Module):
         if not args:
             await utils.answer(message, "Ссылку мне ДАЙ СУКА ЕБАНАЯ")
             return
-        r = await message.client.inline_query('tokstik_bot', args)
+        r = await message.client.inline_query('tikdobot', args)
         await message.client.send_file(message.to_id, r[1].result.content.url)
         await message.delete()
