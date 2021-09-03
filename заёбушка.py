@@ -6,14 +6,14 @@ def register(cb):
 	
 class ЗаёбушкаMod(loader.Module):
 	"""Заебет любого"""
-	strings = {'name': 'Заёбушка'}
+	strings = {'name': 'NIGGER ALARM'}
 	def __init__(self):
 		self.name = self.strings['name']
 		self._me = None
 		self._ratelimit = []
 		
-	async def заебуcmd(self, message):
-		""".заебу <колличество> <реплай на того, кого заебать>"""
+	async def niggercmd(self, message):
+		""".nigger <колличество> <реплай на того, кого заебать>"""
 		reply = await message.get_reply_message()
 		if not reply:
 			await message.edit("<b>А кого заёбывать-то?</b>")
@@ -27,7 +27,7 @@ class ЗаёбушкаMod(loader.Module):
 					count = 50
 				else:
 					count = int(args[0])
-		txt = '<a href="tg://user?id={}">Заёбушка :3</a>'.format(id)
+		txt = '<a href="tg://user?id={}">!!!NIGGER ALARM!!!</a>'.format(id)
 		await message.delete()
 		for _ in range(count):
 			await sleep(0.3)
