@@ -16,7 +16,6 @@ class Web2zipMod(loader.Module):
 	async def web2zipcmd(self, message):
 		""".web2zip <ссылка на сайт>/nExemple: https://pupadel.ml"""
 		website = utils.get_args_raw(message)
-		website = r'website
 		if not website:
 			await message.edit("Используйте <code>.help Web2zip</code>")
 			return
