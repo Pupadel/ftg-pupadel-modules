@@ -17,7 +17,7 @@ class Web2zipMod(loader.Module):
 		""".web2zip <ссылка на сайт>/nExemple: https://pupadel.ml"""
 		website = utils.get_args_raw(message)
 		if website.startswith("https://"): website = website[8:]
-   		if website.startswith("http://"): website = website[7:]
+		if website.startswith("http://"): website = website[7:]
 		if not website:
 			await message.edit("Используйте <code>.help Web2zip</code>")
 			return
