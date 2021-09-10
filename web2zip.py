@@ -26,9 +26,7 @@ class Web2zipMod(loader.Module):
 		await message.edit("<code>Загрузка...</code>")
 		sp.getoutput('apt install wget -y && apt install zip -y')
 		path = sp.getoutput('pwd')
-		output = sp.getoutput(f'wget -r -k -l 30 -p -E -nc {website} -P {path}')
-		with open("output.txt", "w") as file:
-		    file.write(output)
+		sp.getoutput(f'wget -r -k -l 30 -p -E -nc {website} -P {path}')
 		if f"wget: unable to resolve host address ‘{website}’" in output:
 			await message.edit("<code>Сайт не найден</code>")
 			return
