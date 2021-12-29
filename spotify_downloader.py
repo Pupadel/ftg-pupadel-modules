@@ -34,7 +34,7 @@ class SpotifyDownloaderMod(loader.Module):
         try:
             message = message[0]
         except: pass
-        music = await self.client.inline_query('spotifysavebot', args)
+        music = await self.client.send_message('spotifysavebot', args)
         for mus in music:
             if mus.result.type == 'audio':
                 await self.client.send_file(message.peer_id, mus.result.document, reply_to=message.reply_to_msg_id)
