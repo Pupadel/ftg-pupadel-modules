@@ -17,4 +17,4 @@ class хуирминалMod(loader.Module):
 		args = utils.get_args_raw(message)
 		await message.edit(f'<strong>Выполняемая cumанда:</strong>\n<code>{args}</code>\n\n<strong>Вывод:</strong>\n\n<strong>Ошибки/Предупреждения:</strong>')
 		await sleep(0.2)
-		await message.edit(f'<strong>Выполняемая cumанда:</strong> <code>{args}</code>\n<strong>Команда завершилась с кодом:</strong> <code>0</code>\n<strong>Вывод:</strong>\n\n\n<strong>Ошибки/Предупреждения:</strong>')
+		await message.edit(f'<strong>Выполняемая cumанда:</strong>\n<code>{args}</code>\n\n<strong>Команда завершилась с кодом:</strong> <code>0</code>\n\n<strong>Вывод:</strong>\n\n\n<strong>Ошибки/Предупреждения:</strong>')
