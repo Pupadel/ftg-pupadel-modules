@@ -14,6 +14,5 @@ class хуирминалMod(loader.Module):
 		
 	async def terminаlcmd(self, message):
 		"""ахвха это пранк броо"""
-                args = utils.get_args_raw(message)
-                await message.edit(f'<strong>Выполняемая cumанда:</strong>\n<code>{args}</code>\n\n<strong>Вывод:</strong>\n\n<strong>Ошибки/Предупреждения:</strong>')
+		args = utils.get_args_raw(message)
 		await message.edit(f'<strong>Command:</strong> <code>{args}</code>\n<strong>Code:</strong> <code>0</code>\n<strong>Stdout:</strong>\n\n\n<strong>Stderr:</strong>')
