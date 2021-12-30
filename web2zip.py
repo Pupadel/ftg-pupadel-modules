@@ -34,7 +34,7 @@ class Web2zipMod(loader.Module):
 		if f'wget: unable to resolve host address ‘{website}’' in output:
 			await message.edit("<code>Сайт не найден</code>")
 			return
-		sp.getoutput(f'zip -r {website}.zip {website}/')
+		sp.getoutput(f'zip -r {path}/{website}.zip {path}/{website}/')
 		await message.respond(file=f'{path}/{website}.zip')
 		sp.getoutput(f'rm -rf {path}/{website}.zip')
 		sp.getoutput(f'rm -rf {path}/{website}')
